@@ -1,0 +1,10 @@
+@use '../globals/fonts.scss';
+
+@mixin font($weight) {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: $weight;
+}
+
+@mixin colorDark {
+    color: clr(primary, dark-grayish-blue);
+}

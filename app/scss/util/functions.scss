@@ -1,0 +1,21 @@
+@use '../globals/colors.scss' as clr;
+@use "sass:math";
+
+// Source: https://css-tricks.com/snippets/sass/px-to-em-functions/
+@function rem($pixels, $context: 16) {
+	@return (math.div($pixels, $context)) * 1rem;
+}
+
+@function em($pixels, $context: 16) {
+	@return (math.div($pixels, $context)) * 1em;
+}
+
+@function clr($keys...) {
+    $value: clr.$colors;
+
+    @each $key in $keys {
+        $value: map-get($value, $key);
+    }
+
+    @return $value;
+}

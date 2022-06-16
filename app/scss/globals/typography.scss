@@ -1,0 +1,23 @@
+@use '../util' as *;
+@use '../util/mixins.scss' as *;
+
+h1,
+h2,
+h3 {
+	margin-top: 0;
+	line-height: 1.1;
+}
+
+a,
+a:visited,
+a:active {
+	text-decoration: none;
+}
+
+.username {
+	@include font(500);
+}
+
+.card__heading {
+	@include font(600);
+}
